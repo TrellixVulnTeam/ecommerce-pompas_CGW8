@@ -36,6 +36,12 @@
     flex-direction: row;
 }
 
+@media (max-width: 768px) {
+    .card-cajeros {
+        flex-direction: column;
+    }
+}
+
 .card-body-cajeros {
     border: 1px solid red;
     margin: 1rem;

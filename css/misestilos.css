@@ -27,3 +27,33 @@
     width: 70%;
     margin: 1rem auto 0;
 }
+
+.nav-link {
+    cursor: pointer
+}
+
+.card-cajeros {
+    flex-direction: row;
+}
+
+.card-body-cajeros {
+    border: 1px solid red;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.img-pago {    
+    width: 3rem;
+    margin-right: 10px;
+
+}
+
+.ingreso {
+    margin-right: 1rem;
+}
+
+.form-login {
+    background: red;
+    padding: 1rem;
+    color: white;
+}

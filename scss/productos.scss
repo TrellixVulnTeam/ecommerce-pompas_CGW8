@@ -1,0 +1,26 @@
+.card-product {
+  width: 100%;
+  border-radius: 5px;
+  img {
+    width: 100%;
+  }
+  &:hover {
+    z-index: 9;
+    transform: translateY(-17px);
+    cursor: pointer;
+  }
+  .titleProducts {
+    margin: 1rem auto;
+    text-align: center;
+    animation: rotaryBlockFirst 20s linear infinite;
+  }
+}
+
+@keyframes rotaryBlockFirst {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}

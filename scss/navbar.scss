@@ -1,0 +1,20 @@
+.logo {
+  height: 40px;
+}
+
+.navbar {
+  background-image: linear-gradient(45deg, $navbarBackground, transparent);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0px 4px 8px -7px $navbarShadow;
+}
+
+.navbar-nav {
+  .nav-link {
+    color: $navbarColorItem !important;
+    cursor: pointer;
+  }
+}
+
+.active {
+  border-bottom: 1px solid $navbarItemActive;
+}

@@ -3,18 +3,40 @@
 @import "productos.scss";
 @import "login.scss";
 
+$altura: 358px;
+$display: flex;
+$rem1: 1rem;
+
+$vista: mobile;
+$mobileBreakpoint: 768px;
+
+
+// mapa agregado 
+
+$estilos: (
+  altura: $altura,
+  vista: $display,
+  direccion1: column,
+  direccion2: row,
+  medida1: $rem1,
+);
+
+
 .w-100 {
-  height: 358px;
+  height: map-get($estilos, altura);
 }
 
 .card-body-p {
-  display: flex;
-  flex-direction: row;
-  column-gap: 2rem;
+  display: map-get($estilos, vista);
+  flex-direction: map-get($estilos, direccion2);
+  // operaciones 
+  column-gap: $rem1 + $rem1;
   justify-content: center;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    row-gap: 1rem;
+  @if $vista == mobile {
+    @media (max-width: $mobileBreakpoint) {
+      flex-direction: map-get($estilos, direccion1);
+      row-gap: map-get($estilos, medida1);
+    }
   }
 }
 
@@ -37,34 +59,43 @@
   }
 }
 
+//mixin 
+
+@mixin cajero($borderRadius, $border, $padding, $width, $margin){
+  border-radius: $borderRadius;
+  border: $border;
+  padding: $padding;
+  width: $width;
+  margin: $margin ;
+}
+
 .perfil-cajero {
-  border-radius: 50%;
-  border: 1px solid $borderColor;
-  padding: 1rem;
-  width: 70%;
-  margin: 1rem auto 0;
+  @include cajero (50%, 1px solid $borderColor, $rem1, 70%,  map-get($estilos, medida1) auto 0);
 }
 
 .card-cajeros {
-  flex-direction: row;
-  @media (max-width: 768px) {
-    flex-direction: column;
+  flex-direction: map-get($estilos, direccion2);
+  @if $vista == mobile {
+    @media (max-width: $mobileBreakpoint) {
+      flex-direction: map-get($estilos, direccion1);
+    }
   }
 }
 
 .card-body-cajeros {
   border: 1px solid $borderColor;
-  margin: 1rem;
-  border-radius: 1rem;
+  margin: map-get($estilos, medida1);
+  border-radius: map-get($estilos, medida1);
 }
 
 .img-pago {
-  width: 3rem;
+  // operaciones 
+  width: map-get($estilos, medida1) + ($rem1 * 2);
   margin-right: 10px;
 }
 
 .ingreso {
-  margin-right: 1rem;
+  margin-right: $rem1;
 }
 
 .container-fluid {
@@ -72,19 +103,23 @@
 }
 
 .carousel-inner {
-  margin: 1rem auto;
+  margin: map-get($estilos, medida1) auto;
   border-radius: 5px;
+}
+
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
 }
 
 .card {
   img {
-    width: 286px;
-    height: 200px;
+    @include sizes(286px, 200px);
   }
 }
 
 .carousel-control:hover {
-  background-color: black;
+  background-color: $black;
   opacity: 0.5;
   transition: background-color 0.5s ease;
 }
@@ -118,4 +153,29 @@
   75% {
     transform: translateY(4px);
   }
+}
+
+
+// extend 
+.btnPropio {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: red;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-primary {
+  @extend .btnPropio;
+    border-color: #007bff;
 }

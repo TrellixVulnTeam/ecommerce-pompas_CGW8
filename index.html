@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
 
-    <link rel="shortcut icon" href="imgs/logo.PNG" type="image/x-icon">    
+    <link rel="shortcut icon" href="/imgs/logo.PNG" type="image/x-icon">    
     <link rel="stylesheet" href="css/misestilos.css" />
     <title>CriptoLibre</title>
 </head>
@@ -50,8 +50,10 @@
         </nav>
         
         <div class="container">
-            <h1>CriptoLibre</h1>
-            <p>El Ecommerce Cripto más grande Argentina</p>
+            <div class="col titleHome">
+                <h1>CriptoLibre</h1>
+                <p>El Ecommerce Cripto más grande Argentina</p>
+            </div>
         </div>
         <!-- carrousel  -->
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -82,7 +84,7 @@
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <button class="btnPropio btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
                             data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Ver más Productos
                         </button>
@@ -101,35 +103,11 @@
                                     <br><br>
                                     Precio $
                                 </p>
-                                <button type="button" class="btnPropio btn-primary" data-toggle="modal"
-                                    data-target="#staticBackdrop">
+                                <button type="button" class="btn btn-primary">
                                     Ver Publicación
                                 </button>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
-                                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">Producto 1</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Toda la descripcion del producto que se desee agregar
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Agregar al
-                                                    Carrito</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="card card-animation" style="width: 18rem">
@@ -141,8 +119,7 @@
                                     <br><br>
                                     Precio $
                                 </p>
-                                <button type="button" class="btnPropio btn-primary" data-toggle="modal"
-                                    data-target="#staticBackdrop">
+                                <button type="button" class="btn btn-primary">
                                     Ver Publicación
                                 </button>
 
@@ -181,8 +158,7 @@
                                     <br><br>
                                     Precio $
                                 </p>
-                                <button type="button" class="btnPropio btn-primary" data-toggle="modal"
-                                    data-target="#staticBackdrop">
+                                <button type="button" class="btn btn-primary">
                                     Ver Publicación
                                 </button>
 
@@ -235,7 +211,7 @@
                                     destacan<br><br>
                                     Precio $
                                 </p>
-                                <a href="#" class="btnPropio btn-primary">Ver Publicación</a>
+                                <a href="#" class="btn btn-primary">Ver Publicación</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem">
@@ -247,7 +223,7 @@
                                     destacan<br><br>
                                     Precio $
                                 </p>
-                                <a href="#" class="btnPropio btn-primary">Ver Publicación</a>
+                                <a href="#" class="btn btn-primary">Ver Publicación</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem">
@@ -259,7 +235,7 @@
                                     destacan<br><br>
                                     Precio $
                                 </p>
-                                <a href="#" class="btnPropio btn-primary">Ver Publicación</a>
+                                <a href="#" class="btn btn-primary">Ver Publicación</a>
                             </div>
                         </div>
                     </div>
